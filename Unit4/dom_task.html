@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK</title>
+</head>
+<body>
+    <h2 id="heading">DOM</h2>
+    <img src="/Activities/h1.jpg" id="img" height="200px" width="200px">
+    <p id="para">This is an image</p>
+    <button onclick="change()">Change</button>
+    <script>
+        function change(){
+            document.getElementById("heading").innerHTML="Heading changed";
+            document.getElementById("para").style.color="blue";
+            document.getElementById("img").remove();
+        }
+    </script>
+</body>
+</html>
