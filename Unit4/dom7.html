@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM another example</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 100px;
+            background-color: bisque;
+            text-align: center;
+            font-size: 20px;
+            line-height: 100px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>This is another example</h2>
+    <div id="box">Hello</div>
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeColor()">Change Color</button>
+    <button onclick="toggleBox()">Toggle Box</button>
+
+    <script>
+        function changeText(){
+            document.getElementById("box").innerText="Text Changed";
+        }
+        function changeColor(){
+            document.getElementById("box").style.backgroundColor="lightcoral";
+        }
+        function toggleBox(){
+            let box=document.getElementById("box");
+            box.style.display=box.style.display==="none"?"block":"none";
+        }
+    </script>
+</body>
+</html>
