@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example Color</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #colorBox{
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Change Background Color</h1>
+
+    <div id="colorBox">Box</div>
+    <button id="changeColorBtn">Change Color</button>
+
+    <script>
+        //access the button and div element
+        let button=document.getElementById("changeColorBtn");
+        let box=document.getElementById("colorBox");
+
+        //arrar of colors to switch between randome colors
+        let colors= ["red", "green", "blue", "yellow", "orange", "purple"];
+
+        //add event listener to the button
+        button.addEventListener("click",function(){
+            let randomColor= colors[Math.floor(Math.random()*colors.length)]
+            box.style.backgroundColor=randomColor;
+        })
+    </script>
+</body>
+</html>

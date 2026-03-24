@@ -22,6 +22,15 @@
             let name=document.getElementById("name").value;
             let li=document.createElement("li");
             li.innerHTML=name;
+            document.getElementById("students").appendChild(li);
+        }
+        function changeFirst(){
+            let first=document.querySelector("#students li");
+            first.innerHTML="Updated Student";
+        }
+        function removeLast(){
+            let list=document.getElementById("students");
+            list.removeChild(list.lastElementChild);
         }
     </script>
 </body>
