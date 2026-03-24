@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            background-color: aliceblue;
+            height: 400px;
+            width: 400px;
+            text-align: center;
+            align-items: center;
+            padding: 30px;
+            margin-top: 30px;
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .img{
+            transition: transform 0.5s;
+            padding: 40px;
+        }
+        .img:hover{
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+    <p>Hi, I am pikachu</p>
+    <img src="p4.jpg" alt="Pikachu" width="200" height="200"  id="mainImage" class="img">
+    </div>
+</body>
+</html>

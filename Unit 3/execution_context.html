@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execution Context</title>
+</head>
+<body>
+    <h2>This is global execution context</h2>
+
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <script>
+        //Global Variable
+        let studentName="Harshita";
+
+        //Global Variable 
+        let course="Btech CSE";
+
+        //Global function
+        function showStudent(){
+            document.getElementById("output1").innerHTML="Student Name: "+studentName;
+        }
+
+        //another function
+        function showCourse(){
+            document.getElementById("output2").innerHTML="Course: "+course;
+        }
+
+        //call the functions
+        showStudent();
+        showCourse();
+
+        //accessing global variable directly
+        console.log("Student name: "+studentName);
+        console.log("Course: "+course);
+    </script>
+</body>
+</html>

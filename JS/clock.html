@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        body{
+            display:flex;
+            text-align: center;
+            height: 100vh;
+            flex-direction:column;
+            margin: 0%;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="clock"></h2>
+    <h2 id="date"></h2>
+    <script>
+        function updateClock(){
+            let now=new Date();
+            let timeString=now.toLocaleTimeString();
+            document.getElementById("clock").innerText=timeString;
+            let dateString=now.toLocaleDateString();
+            document.getElementById("date").innerText=dateString;
+        }
+        
+        setInterval(updateClock, 1000);
+        updateClock(); // to show the clock immediately when the page loads
+    </script>
+</body>
+</html>

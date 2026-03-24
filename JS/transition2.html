@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .btn{
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            transition: transform 0.3s;
+        }
+        .btn:hover{
+            transform: scale(1.1);
+        }
+        .card{
+            margin-top: 20px;
+            background-color: rgb(169, 101, 232);
+            width: 150px;
+            height: 100px;
+            padding: 30px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: font-family 0.5s ease, font-size 0.5s, color 0.5s, background-color 0.5s, rotate 0.5s;
+        }
+        .card:hover{
+            font-family: cursive;
+            font-size: larger;
+            color: white;
+            background-color: #f686ab;
+            rotate: inherit 180deg;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Hover</button>
+    <div class="card">
+        <p>
+            Hi, this is a card
+        </p>
+    </div>
+</body>
+</html>

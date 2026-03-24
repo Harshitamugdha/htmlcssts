@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <h2>Closures</h2>
+
+    <button onclick="runClosure()">Click to run Closures</button>
+    <p id="one"></p>
+
+    <script>
+        function outer(){
+            let name="Harshita";
+
+            //inner function
+            function inner(){
+                return "Student Name: "+name;
+            }
+            return inner;
+        }
+
+        //calling outer function and it will store returned function
+        const result=outer()
+
+        //function to run closure
+        function runClosure(){
+            document.getElementById("one").innerHTML=result()
+            console.log(result());
+        }
+    </script>
+</body>
+</html>

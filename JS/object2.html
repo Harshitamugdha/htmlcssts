@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let employee={
+            name:"Harshita",
+            empid:1240,
+            department:"IT",
+            salary:205000,
+        }
+        document.write(employee.name + "<br>");
+        document.write(employee.empid + "<br>");
+        document.write(employee.department + "<br>");
+        document.write(employee.salary + "<br>");
+        employee.designation="Software Engineer";
+        employee.salary=250000;
+        employee.welcome=function(){
+            return "Welcome " +this.designation + " " + this.name;
+        }
+        document.write(employee.welcome() + "<br>");
+    </script>
+</body>
+</html>

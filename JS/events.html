@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ONCHANGE -->
+    <!-- <select name="" id="colorSelect">
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>   
+    <p>Selected Color: <span id="selectColour"></span></p>
+    <script>
+        document.getElementById("colorSelect").onchange = function(){
+            document.getElementById("selectColour").innerText=this.value
+        }
+    </script> -->
+
+    <!-- ONMOUSEOVER -->
+    <!-- <div id="box" style="width: 100px ;height: 100px; background-color: red;"></div>
+    <script>
+        document.getElementById("box").onmouseover = function(){
+            box.style.backgroundColor = "yellow"
+        }
+        document.getElementById("box").onmouseout = function(){
+            box.style.backgroundColor = "red"
+        }
+    </script> -->
+
+    <!-- ONKEYPRESS -->
+    <!-- <input type="text" id="keyInput" placeholder="Press a key">
+    <p>Key pressed: <span id="keyoutput"></span></p>
+    <script>
+        document.getElementById("keyInput").onkeypress = function(e){
+            document.getElementById("keyoutput").innerText = e.key;
+        }
+    </script> -->
+
+    <p id="text">Hello this is INT219</p>
+    <button id="toggleButton">Hide</button>
+    <script>
+            document.getElementById("toggleButton").onclick = function(){
+                let text = document.getElementById("text")
+                if(text.style.display==="none") {
+                    text.style.display = "block"
+                    this.innerText = "Hide";
+                }
+                else{
+                    text.style.display = "none"
+                    this.innerText = "Show"
+                }
+            }
+    </script>
+</body>
+</html>
+

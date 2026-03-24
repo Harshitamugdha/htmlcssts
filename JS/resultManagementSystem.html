@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class with default parameters
+
+        class Student{
+            constructor(name,age,course ="Computer Science"){
+                this.name=name;
+                this.age=age;
+                this.course=course;
+            }
+            displayinfo(){
+                console.log(`Name : ${this.name}`)
+                console.log(`Age : ${this.age}`)
+                console.log(`Course : ${this.course}`)
+            }
+        }
+
+        //arrow function with rest parameters
+
+        const calculateAverage= (...marks)=>{
+            const total=marks.reduce((sum,mark)=> sum+mark,0)
+            return total/marks.length
+        }
+
+        //Promise Function
+
+        const getResult=(average)=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    if(average>=40){
+                        resolve(`Result : Passed with average ${average}`)
+                    }
+                    else{
+                        reject(`Result: Failed with average ${average}`)
+                    }
+                },2000)
+            })
+        }
+
+        //Async Function
+        const showResult = async(average)=>{
+            try{
+                const result=await getResult(average)
+                console.log(result)
+            }
+            catch(error){
+                console.log(error)
+            }
+        }
+
+        //Main function
+        const main=() =>{
+            const student=new Student("Harshita", 19);
+            console.log("Student details: ")
+            student.displayinfo();
+
+            //array
+            let marks= [75,90,85];
+
+            //destructuring
+            let [m1,m2,m3]= marks;
+            console.log("Marks")
+            console.log(`Mark 1: ${m1}`)
+            console.log(`Mark 2: ${m2}`)
+            console.log(`Mark 3: ${m3}`)
+
+            //spread operator
+            let updatedMarks= [...marks, 95]
+            console.log("updated marks", updatedMarks)
+
+            //calculate average using spread operator
+            const average=calculateAverage(...updatedMarks)
+            console.log(`Calculated average: ${average}`)
+
+            showResult(average);
+        }
+        main();
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            animation: pulse 1.5s infinite;
+            color: white;
+        }
+        @keyframes pulse{
+            0%{
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgb(130, 127, 127);
+            }
+            50%{
+                transform: scale(1.5);
+                box-shadow: 0 10px 20px rgb(130, 127, 127);
+            }
+            100%{
+                transform: scale(1);
+                box-shadow: 0 0 0  rgb(130, 127, 127);
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        let name=prompt("Enter your name: ");
+        let box = document.querySelector(".box");
+    box.textContent = "Welcome, " + name + "💕";    
+    </script>
+</body>
+</html>

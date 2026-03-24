@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: center; /* horizontal alignment */
+    align-items: center; /* vertical alignment */
+    gap: 10px;
+    height: 100vh; /* full viewport height */
+    /*background-color: aqua;*/
+}
+.box{
+    border: 1px solid black;
+    padding: 20px; /*to give space betwwen content and the border of div*/
+    background-color: rgb(150, 243, 243);
+}

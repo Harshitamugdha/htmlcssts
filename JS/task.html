@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("bg.jpg") ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            backdrop-filter: opacity(20%);
+            text-align: center;
+        }
+        h2{
+            color: rgb(133, 130, 130);
+            font-size: 50px;
+            text-shadow: rgb(112, 112, 112) 1px 1px 3px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Silver Symphony</h2>
+    <img id="slide" width="20%" height="30%">
+    <script>
+        let images = [ // array of images
+            "f1.jpg",
+            "f4.png",
+            "f3.jpg",
+            "f5.jpg"
+        ]
+        let index=0;
+        function changeImage(){
+            document.getElementById("slide").src=images[index];
+            index=(index+1)%images.length;
+
+        }
+        setInterval(changeImage,4000);
+        </script>
+    <div class="card">
+    </div>
+</body>
+</html>

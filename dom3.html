@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM3</title>
+</head>
+<body>
+    <button onclick="">Add paragraph</button>
+
+    <script>
+        function add(){
+            let p=document.createElement("p");
+            p.innerHTML="New Paragraph Added";
+            document.body.appendChild(p);
+        }
+    </script>
+</body>
+</html>

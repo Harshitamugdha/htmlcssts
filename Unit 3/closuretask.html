@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h2>Counter with Closure</h2>
+    <button onclick="show()">Show Details</button>
+    <p id="output">Details: </p>
+
+    <script>
+        //outer function
+        function hospital(){
+            let patient ="ABC" //private variable
+
+            return{
+                patient: function(){
+                    let age=30;
+                    let gender="Male";
+                    document.getElementById("output").innerHTML=
+                    "Details: Name: "+patient+", Age: "+age+", Gender: "+gender;
+                }
+            }
+
+        }
+        //create counter object
+        const data=hospital();
+        //Accessing closure functions
+
+        function show(){
+            data.patient();
+        }
+
+    </script>
+</body>
+</html>

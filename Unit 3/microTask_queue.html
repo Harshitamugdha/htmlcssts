@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroTask Queue</title>
+</head>
+<body>
+    <h2>Microtask Queues</h2>
+    <script>
+        console.log("Start")
+
+        setTimeout(()=>{
+            console.log("SetTimeout Task")
+        },0)
+        Promise.resolve().then(()=>{
+            console.log("Promise Task.")
+        })
+
+        console.log("End")
+
+    </script>
+</body>
+</html>

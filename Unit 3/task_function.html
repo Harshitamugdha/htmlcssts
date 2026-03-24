@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Marks</h1>
+    <p id="one"></p>
+    <p id="two"></p>
+    <script>
+        let studentName="Harshita";
+
+        function showMarks(){
+            let marks=25;
+            document.getElementById("one").innerHTML="Student Name: "+studentName;
+            document.getElementById("two").innerHTML="Maths Marks: "+marks;
+            console.log("Student Name: "+studentName);
+            console.log("Marks: "+marks);
+        }
+
+        showMarks();
+    </script>
+</body>
+</html>

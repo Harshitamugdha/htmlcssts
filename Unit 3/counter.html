@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h2>Counter with Closure</h2>
+    <button onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+
+    <p id="output">Count: </p>
+
+    <script>
+        //outer function
+        function createCounter(){
+            let count =0 //private variable
+
+            return{
+                increment: function(){
+                    count++;
+                    document.getElementById("output").innerHTML=
+                    "Count: "+count;
+                },
+                decrement: function(){
+                    count--;
+                    document.getElementById("output").innerHTML=
+                    "Count: "+count;
+                }
+            }
+
+        }
+        //create counter object
+        const counter=createCounter()
+        //Accessing closure functions
+
+        function increment(){
+            counter.increment();
+        }
+
+        function decrement(){
+            counter.decrement();
+        }
+    </script>
+</body>
+</html>

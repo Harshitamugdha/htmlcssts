@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+           background: #F58220;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+        }
+        marquee{
+            color: black;
+            font-size: 20px;
+            
+        }
+        nav{
+            text-align: center;
+            background: black;
+            padding: 10px;
+        }
+        .nav a{
+            padding: 20px;
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 15px;
+        }   
+        .main{
+            display: flex;
+        }
+        .sidebar{
+            width: 25%;
+            background:rgb(255, 251, 246);
+            padding: 20px;
+            font-size: 15px;
+            animation: moveSidebar 3s ease-in infinite alternate;
+        }
+        .content{
+            width: 75%;
+            padding: 30px;
+        }
+        .big-box{
+            background:rgb(255, 251, 246);
+            padding: 20px;
+            height: 200px;
+            display: flex;
+            align-items: center;    
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+            transition: 0.5s;
+            animation: colorMOve 3s ease-in infinite alternate;
+        }
+        .big-box:hover{
+            background: orange;
+            color: brown;
+            transform: translate(20px);
+        }
+        @keyframes moveSidebar{
+            from{transform: translateY(-50px)}
+            to{transform: translateY(0);}
+        }
+        @keyframes colorMOve{
+            from{
+                background: orange;
+                transform: translateX(0);
+            }
+            to{
+                background: rgb(244, 223, 184);
+                transform: translateX(30px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="lpu-logo.png" height="100px" width="180px">
+        <marquee>Lovely Professional University - Welcome to our website</marquee>
+    </header>
+    <nav class="nav">
+        <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="#"><i class="fa-regular fa-newspaper"></i>News</a>
+        <a href="#"><i class="fa-solid fa-blog"></i>Blog</a>
+    </nav>
+    <div class="main">
+        <!-- sidebar -->
+         <div class="sidebar">
+            <h1>Sidebar Menu</h1>
+            <p>Courses</p>
+            <p>Admissions</p>
+            <p>Results</p>
+            <P>Placements</P>
+         </div>
+         <!-- Content -->
+          <div class="content">
+            <div class="big-box">Article Section</div>
+            <div class="big-box">News Section</div>
+            <div class="big-box">Blog Section</div>
+          </div>
+    </div>
+</body>
+</html>

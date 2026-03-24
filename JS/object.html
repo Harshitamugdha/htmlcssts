@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student={
+            name:"Harshita",
+            age:19,
+            greet: function(){
+                return "Hello " + this.name;
+            }
+        }
+        // document.write(student.name + "<br>"); // to access the name property of the student object
+        // document.write(student.age);
+        document.write(student["name"] + "<br>"); //access using brackets
+        document.write(student["age"] + "<br>");
+
+        //Addinng new property to the object
+        student.course="Btech CSE";
+        document.write(student.course + "<br>");
+
+        //change a property value
+        student.age=20;
+        document.write(student.age + "<br>");
+        document.write(student.greet() + "<br>");
+    </script>
+</body>
+</html>

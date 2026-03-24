@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+        }
+        #form-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 270px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        #btn{
+            background-color: rgb(90, 224, 90);
+            padding: 6px;
+            border: none;
+            border-radius: 14px;
+            width: auto;
+        }
+    </style>
+</head>
+<!-- Task 
+    1. Design a registration form, values of user name,email, contact should be displayed in a paragraph
+    2. Apply an event through which the button should be changing its styling properties 
+        a. when the mouse is over the button, it should change its colour to red 
+        b. when button is clicked it should change the innertext of button from SUBMIT to SUBMITTED
+-->
+<body>
+    <h1>Registration form</h1>
+    <div id="form-container">
+        <form action="">
+            <label for="name">Name: </label>
+            <input type="text" id="name" placeholder="Enter your name"><br>
+            <br>
+            <label for="email">Email: </label>
+            <input type="email" placeholder="Enter your email"  id="email"><br><br>
+            <label for="contact">Contact no.: </label>
+            <input type="text" id="num" placeholder="Enter your number"><br><br>
+            <button  id="btn">SUBMIT</button>
+        </form>
+    </div>
+    <script>
+            document.getElementById("btn").onmouseover = function (){
+                btn.style.backgroundColor = "red";
+                
+            }
+            document.getElementById("btn").onmouseout = function (){
+                btn.style.backgroundColor = "rgb(90, 224, 90)";
+
+            }
+            document.getElementById("btn").onclick = function (){
+                Document.getElementById("btn").innerText = "SUBMITTED"
+            }
+            
+                
+      
+    </script>
+</body>
+</html>

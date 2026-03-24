@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestasia</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Italianno&family=Monsieur+La+Doulaise&display=swap');
+        *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        }        
+        body{
+        background-color: #ede2cf;;
+        }
+        section{
+        display: flex;
+        }
+        i{
+        padding: 10px;
+        }
+        .sidebar{
+        background-color:#E3D8C4;
+        padding:25px;
+        margin:20px;
+        width:260px;
+        min-height:100vh;
+        text-align: center;
+        border-radius:10px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.08);
+        }
+        .header{
+        text-align:center;
+        background-color:#449991;
+        padding:12px 20px;
+        color:#ebd095;
+        box-shadow:0 3px 8px rgba(0,0,0,0.15);   
+        }
+        .h1{
+        font-family: "Monsieur La Doulaise", cursive;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 50px;
+        }
+        .nav1{
+        text-align: center;
+        margin-top:8px;
+        }
+        a{
+        color: #ebd095;
+        text-decoration: none;
+        padding: 10px;
+        }
+        img{
+        padding: 10px;
+        }
+        .main{
+        display:flex;
+        justify-content:center;
+        gap:30px;
+        padding:20px;
+        }
+        .footer{
+        text-align: center;
+        }
+        .content{
+        text-align: center;
+        }
+        .content img{
+        box-shadow:0 4px 10px rgba(0,0,0,0.08);
+        border-radius: 10px;
+        }
+        .card img:hover{
+        animation: image 1s ease;
+        }
+        marquee{
+        color: white;
+        font-size: 20px;
+        font-family: "Arizonia", cursive;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 30px;   
+        width:400px;
+        margin:5px auto;
+        display:block;
+        }
+        @keyframes image{
+        from{transform: scale(1)}
+        to{transform: scale(1.5)}
+        }
+       .content{
+        text-align:center;
+        color:white;
+        padding:20px;
+        margin:20px auto;
+        font-size:30px;
+        }
+        .box{
+        flex: 1;
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        }
+        .card img{
+        border-radius: 10px;
+        }
+        .sidebar h2{
+        margin-bottom:20px;
+        font-size:22px;
+        border-bottom:2px solid #c8bca6;
+        padding-bottom:10px;
+        }
+        .sidebar p{
+        padding:5px 8px;
+        margin:2px 0;
+        border-radius:6px;
+        cursor:pointer;
+        transition:0.3s;
+        text-align: left;
+        }
+        .sidebar p:hover{
+        background-color:#449991;
+        color:#ebd095;
+        transform: scale(1.2);
+        padding-left:15px;
+        
+        }
+        .sidebar i{
+        margin:10px;
+        }
+        .sidebar-logo{
+        width:220px;
+        display:block;
+        margin:10px auto 20px auto;
+        }
+        .sidebar-logo:hover{
+        transform:scale(1.8);
+        transition:0.3s;
+        }   
+        a:hover{
+        background-color:#E3D8C4;
+        color:black;
+        transform: scale(1.2);
+        padding-left:15px;
+        }
+        i:hover{
+        background-color:#E3D8C4;
+        color:black;
+        transform: scale(1.2);
+        padding-left:15px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1 class="h1">Nestasia</h1>
+        <marquee>A little love to your home</marquee>
+        <nav class="nav1">
+            <a href="#">Home</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Holi</a>
+            <a href="#">Sale</a>
+            <a href="#">Lamps</a>
+            <a href="#">Candles</a>
+            <a href="#">Paintings</a>
+            <a href="#">Frames</a>
+            <a href="#">Curtains</a>
+            <a href="#">Cushions</a>
+            <a href="#">Pillows</a>
+            <a href="#">Sofas</a>
+            <a href="#">Chairs</a>
+            <a href="#">Tables</a>
+            <a href="#">Cabinets</a>
+            <a href="#">Cupboards</a>
+            <a href="#">Beds</a>
+            <a href="#">Gifts</a>
+            <i class="fa-brands fa-sistrix"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-circle-user"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </nav>
+    </div>
+    <section>
+        <div class="sidebar">
+            <img src="logo.png" class="sidebar-logo">
+            <h2>Categories</h2>
+            <p><i class="fa-solid fa-utensils"></i>  Dining</p>
+            <p><i class="fa-solid fa-kitchen-set"></i> Kitchen</p>
+            <p><i class="fa-solid fa-couch"></i> Decor</p>
+            <p><i class="fa-solid fa-bath"></i> Bath</p>
+            <p><i class="fa-solid fa-chair"></i> Furniture</p>
+            <p><i class="fa-solid fa-lightbulb"></i> Light</p>
+            <p><i class="fa-solid fa-plate-wheat"></i> Tableware</p>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h1>Shop All Collections!</h1><br>
+                <h2>UPTO 50% OFF</h2>
+                <img src="design.jpg" alt="" height="400px" width="700px">
+            </div>
+            <div class="main">
+                <div class="card">
+                    <img src="h1.jpg" alt="img1" height="200px" width="200px">
+                </div>
+                <div class="card">
+                    <img src="h2.jpg" alt="img1" height="200px" width="200px">
+                </div>
+                <div class="card">
+                    <img src="h3.jpg" alt="img1" height="200px" width="200px">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>©2026 Nestasia All rights preserved</p>
+    </footer>
+</body>
+</html>

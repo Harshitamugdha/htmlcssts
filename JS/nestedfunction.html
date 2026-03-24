@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function bankaccount(accountholder){
+        //     var balance=1000;
+
+        //     function deposit(amount){
+        //         balance+=amount;
+        //         console.log(accountholder + " deposited: " + amount);
+        //         console.log(" New balance: " + balance);
+        //     }
+
+        //     function withdraw(amount){
+        //         balance=balance-amount;
+        //         console.log(accountholder + " withdrew: " + amount);
+        //         console.log(" New balance: " + balance);
+        //     }
+
+        //     deposit(500);
+        //     withdraw(200);
+        // }
+        // bankaccount("Harshita");
+    function attendance(studentName){
+        var totalLectures = 40;
+        var attendedLectures = 10;
+        var threshold = 22;
+
+        function calculate(){
+            var percentage = (attendedLectures / totalLectures) * 100;
+            console.log(studentName + " Attendance Percentage: " + percentage + "%");
+        }
+
+        function check(){
+            if(attendedLectures >= threshold){
+                console.log(studentName + " is Eligible for Exam");
+            }
+            else{
+                console.log(studentName + " is Not Eligible for Exam");
+            }
+        }
+
+        calculate();
+        check();
+    }
+
+    attendance("Harshita");
+    </script>
+</body>
+</html>
+
+<!-- calcuate the attendance of a student,prepare arrebdance management system using nested function
+count of lectures=10, you need to check if a student is eligible for the exam or not
+total lecture=40 threshold=22 lectures -->

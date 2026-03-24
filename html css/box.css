@@ -1,0 +1,38 @@
+.header{
+    background-color: lightblue;
+    border:2px solid black;
+    margin-bottom: 20px;
+}
+.header-container{
+    padding: 20px;
+    text-align: center;
+}
+.content{
+    padding: 20px;
+}
+.section{
+    margin: 20px;
+}
+.card{
+    width: 500px;
+    border: 2px solid black;
+    padding: 16px;
+    margin: auto;
+    background-color: rgb(205, 226, 239);
+}
+.footer{
+    border: 1px, solid black;
+    padding: 10px;
+    background-color: lightblue;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(236, 236, 229);
+    padding: 20px;
+}
+.first{
+    border: 2px solid black;
+    padding: 16px;
+    margin: auto;
+    background-color: rgb(205, 226, 239);
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="f1.jpg" width="300" height="200" alt="" id="slider"> <br>
+    <br>
+    <button onclick="prev()">prev</button>
+    <button onclick="next()">next</button>
+    <script>
+        let images = ["f1.jpg", "f2.jpg", "f3.jpg", "f4.jpg", "f5.jpg"];
+        let i = 0;
+        function showImage(){
+            document.getElementById("slider").src = images.at(i);    
+        }
+        function next(){
+            i = (i+1)%images.length;
+            showImage();
+        }
+        function prev(){
+            i = (i-1 )%images.length;
+            showImage();
+        }
+        
+    </script>
+</body>
+</html>

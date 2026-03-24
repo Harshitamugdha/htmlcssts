@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin:0;
+            padding: 0;
+            background-color: rgb(247, 240, 231);
+
+        }
+        h1{
+            margin: 40px;
+        }
+        .gallery{
+            display: grid;
+            gap:30px;
+            padding: 20px;
+            margin:auto;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    </style>
+</head>
+<body>
+    <h1>My photo Gallery</h1>
+    <div class="gallery">
+    <img src="Image.jpeg" alt="My photo" width="400" height="300">
+    <img src="Image.jpeg" alt="My photo" width="400" height="300">
+    <img src="Image.jpeg" alt="My photo" width="400" height="300">
+    <img src="Image.jpeg" alt="My photo" width="400" height="300">
+    <img src="Image.jpeg" alt="My photo" width="400" height="300">
+    <img src="Image.jpeg" alt="My photo" width="400" height="300">
+    <img src="Image.jpeg" alt="My photo" width="400" height="300">
+    <img src="Image.jpeg" alt="My photo" width="400" height="300">
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+</head>
+<body style="margin: 0;">
+    <img id="slide" width="50%" height="50%">
+    <script>
+        let images = [ // array of images
+            "p1.png",
+            "p2.jpg",
+            "p3.jpg",
+            "p4.jpg",
+            "p5.png",
+            "p6.jpg",
+        ]
+        let index=0;
+        function changeImage(){
+            document.getElementById("slide").src=images[index];
+            index=(index+1)%images.length;
+
+        }
+        setInterval(changeImage,2000); // its a callback function that will be called every 2 seconds(2000 milliseconds)
+
+    </script>
+</body>
+</html>

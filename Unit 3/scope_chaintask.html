@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CART</h1>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <script>
+        let p1="Laptop";
+        let p2="Mouse";
+        let p3="Keyboard";
+
+        function outerfunction(){
+            let c1="Electronics";
+            let c2="Accesories";
+            function innerfunction(){
+                let price1=90000;
+                let price2=2000;
+                let price3=600;
+                document.getElementById("output1").innerHTML="Product: "+p1+" Price: "+price1+" Category: "+c1;
+                document.getElementById("output2").innerHTML="Product: "+p2+" Price: "+price2+" Category: "+c2;
+                document.getElementById("output3").innerHTML="Product: "+p3+" Price: "+price3+" Category: "+c1;
+
+                console.log("Product: "+p1+" Price: "+price1+" Category: "+c1);
+                console.log("Product: "+p2+" Price: "+price2+" Category: "+c2);
+                console.log("Product: "+p3+" Price: "+price3+" Category: "+c1);
+            }
+            innerfunction();
+        }
+        outerfunction();
+    </script>
+</body>
+</html>

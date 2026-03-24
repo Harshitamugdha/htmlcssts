@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Product{
+            constructor(name, price, category="Machine"){
+                this.name=name;
+                this.price=price;
+                this.category=category;
+            }
+
+            displayproduct(){
+                console.log(`Product Name : ${this.name}`)
+                console.log(`Product Price : ${this.price}`)
+                console.log(`Product category : ${this.category}`)
+            }
+        }
+
+        //arrow function with rest paramteres
+        const calculateTotal=(...price)=>{
+            const total =price.reduce((sum,price)=>sum+price,0)
+            return total;
+        }
+
+        //Promise function
+
+        const processPayment=(totaAmount)=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    if(totaAmount>0){
+                        resolve(`Payment successful, total price: ${totaAmount}`)
+                    }
+                    else{
+                        reject(`Payment failed`)
+                    }
+                },1000)
+            })
+        }
+
+        //Aysnc function
+        const showPaymentStatus = async (amount)=>{
+            try{
+                const message=await processPayment(amount)
+                console.log(message);
+            }
+            catch(error){
+                console.log(error)
+            }
+        }
+
+        //main function
+        const main=()=>{
+            const product1= new Product("Laptop", 90000,"Electronics");
+            const product2= new Product("Mouse", 1000);
+            const product3= new Product("Keyboard", 2000);
+            
+            console.log("Product details")
+            product1.displayproduct();
+            console.log()
+
+            product2.displayproduct();
+            console.log()
+
+            product3.displayproduct();
+            console.log()
+
+            //array 
+            let prices= [product1.price, product2.price, product3.price]
+
+            //destructuring 
+            let [p1,p2,p3]=prices;
+
+            console.log("Product Prices")
+            console.log(`Price 1: ${p1}`)
+            console.log(`Price 2: ${p2}`)
+            console.log(`Price 3: ${p3}`)
+
+            //spread operator
+            let updatedPrices =[...prices, 500]
+            console.log("Updated prices: ", updatedPrices);
+
+            //calculate total usin spread operator
+            const totalAmount= calculateTotal(...updatedPrices);
+            
+            console.log(`Total Amount: ${totalAmount}`)
+
+            //calling async function
+            showPaymentStatus(totalAmount)
+        }
+        main()
+    </script>
+</body>
+</html>

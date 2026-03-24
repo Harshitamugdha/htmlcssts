@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>This is scope chain</H1>
+
+    <p id="output"></p>
+
+    <script>
+        //global variable
+        let uni="LPU";
+        function outerfunction(){
+            //outer function scope
+            let course="Btech CSE";
+            function innerfunction(){
+                //inner function scope
+                let studentName="Harshita";
+                //scope chain
+                document.getElementById("output").innerHTML=
+                "Student Name: "+studentName+
+                " Course: "+course+
+                " University: "+uni;
+
+                console.log("Student Name: "+studentName);
+                console.log("Course: "+course);
+                console.log("University: "+uni);
+            }
+            innerfunction();
+        }
+        outerfunction();
+    </script>
+</body>
+</html>

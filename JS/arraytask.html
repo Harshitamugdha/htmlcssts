@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let rollno=[1,2,3,4,5];
+        document.write("Roll numbers: ");
+        for(let i=0;i<rollno.length;i++){
+            document.write(rollno[i] + " ");
+        }
+        rollno.push(6);
+        rollno.unshift(7);
+        document.write("<br> Roll numbers after adding: ");
+        for(let i=0;i<rollno.length;i++){
+            document.write(rollno[i] + " ");
+        }
+        rollno.pop();
+        rollno.pop();
+        document.write("<br>Roll numbers after removing: ");
+        rollno.forEach(no=>{
+            document.write(no+" ");
+        })
+    </script>
+
+</body>
+</html>

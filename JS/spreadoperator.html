@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1=[20,40];
+        let arr2=[...arr1,30,60,50];
+        //arr2=[20,40,30,60,50];
+        console.log(arr2);
+        //passing array as function
+        function sum(a,b,c){
+            return a+b+c;
+        }
+        let arr=[10,20,30];
+        console.log(sum(...arr));
+
+
+        //WRITE A PROGRAM IN WHICH 2 FUNCTIONS ARE CREATED
+        //AND ARRAY SHOUULD BE PASSED AS ARGUMENTS IN FUNCTION
+
+        function mul(a,b,c){
+            return a*b*c;
+        }
+
+        let a=[5,2,6];
+        console.log(mul(...a));
+
+        function bubblesort(a){
+            for(let i=0;i<=a.length-1;i++){
+                for(let j=i+1;j<=a.length-1;j++){
+                    if(a[i]>a[j]){
+                        let temp=a[i];
+                        a[i]=a[j];
+                        a[j]=temp;
+                    }
+                }
+            }
+            return a;
+        }
+
+        let arrnum=[36,1,3,6,45,23,10];
+        console.log(bubblesort(arrnum));
+    </script>
+</body>
+</html>

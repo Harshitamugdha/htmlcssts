@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Execution Context</title>
+</head>
+<body>
+    <h2>Function execution Context</h2>
+    <p id="one"></p>
+    <p id="two"></p>
+    <script>
+        //global variable
+        let uni="LPU";
+
+        function showStudent(){
+            //function execution context
+            let studentName="Harshita";
+            document.getElementById("one").innerHTML="Student Name: "+studentName;
+            document.getElementById("two").innerHTML="University Name: "+uni;
+
+            console.log("Inside function")
+            console.log("Student Name: "+studentName);
+            console.log("University Name: "+uni);
+        }
+
+        //calling the function
+        showStudent();
+
+
+        let studentName="Harshita";
+
+        function showMarks(){
+            let totalMarks=30;
+            let marksObtained=25;
+            
+        }
+    </script>
+</body>
+</html>

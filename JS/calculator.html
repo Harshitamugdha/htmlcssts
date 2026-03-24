@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200vph;
+            margin: 0;
+        }
+        .calc{
+            display: center;
+            text-align: center;
+            background-color: rgb(228, 226, 226);
+            color: black;
+            width: 600px;
+            height: 400px;
+            padding: 20px;
+            margin-top: 80px;;
+            border: 1px solid black;
+            box-shadow: black 10px 10px 20px;
+        }
+        .buttons{
+            display: grid;
+            gap:30px;
+            padding: 20px;
+            margin:auto;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(2, 1fr);
+            border: 1px solid 2px black;
+        }
+        button{
+            padding: 15px;
+            font-size: 10x;
+            background-color: black;
+            color: white;
+            border: black 2px solid;
+            cursor: pointer;
+            box-shadow: black 1px 5px 10px;
+            transition: background-color 0.3s ease, text-shadow 0.3s ease;
+        }
+        button:hover{
+            background-color: gray;
+            
+        }
+        h1{
+            text-shadow: rgb(145, 143, 143) 1px 1px 3px;
+        }
+        h1:hover{
+            text-shadow: black 1px 1px 3px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function add() {
+            let num1=5
+            let num2=8
+            let num3=num1+num2
+            alert("The sum is: " + num3);
+        }
+        function sub() {
+            let num1=5
+            let num2=8
+            let num3=num1-num2
+            alert("The difference is: " + num3);
+        }
+        function mult() {
+            let num1=5
+            let num2=8
+            let num3=num1*num2;
+            alert("The product is: " + num3);
+        }
+        function div() {
+            let num1=5
+            let num2=8
+            let num3=num1-num2
+            alert("The quotient is: " + num3);
+        }
+        function mod() {
+            let num1=8
+            let num2=5
+            let num3=num1%num2
+            alert("The mod is: " + num3);
+        }
+    </script>
+    <div class="calc">
+    <h1>CALCULATOR</h1>
+    <div class="buttons">
+    <button onclick="add()">ADD</button>
+    <button onclick="sub()">SUBTRACT</button>
+    <button onclick="mult()">MULTIPLY</button>
+    <button onclick="div()">DIVIDE</button>
+    <button onclick="mod()">MODULUS</button>
+    </div>
+    </div>
+</body>
+</html>
