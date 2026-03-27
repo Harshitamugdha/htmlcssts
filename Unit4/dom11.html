@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>First</p>
+    <p>Second</p>
+    <p>Third</p>
+    <button onclick="changeAll()">Click Here</button>
+    <script>
+        function changeAll(){
+            let all=document.querySelectorAll("p");
+            all[0].style.color="red";
+            all[1].style.color="blue";
+            all[2].style.color="green";
+        }
+    </script>
+</body>
+</html>

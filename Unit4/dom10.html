@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This is first para</p>
+    <p>This is second para</p>
+    <button onclick="changeFirst()">Click</button>
+    <script>
+        function changeFirst(){
+            document.querySelector("p").style.color="green" //it will work on the first element only
+        }
+    </script>
+</body>
+</html>
