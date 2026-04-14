@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myClass{
+            color: blue;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <p id="one">This is para one</p>
+    <button onclick="test()">Click Here</button>
+
+    <script>
+        function test(){
+            let element=document.getElementById("one");
+            element.setAttribute("class","myClass");
+
+            let result=element.getAttribute("class");
+            alert(result);
+        }
+    </script>
+</body>
+</html>

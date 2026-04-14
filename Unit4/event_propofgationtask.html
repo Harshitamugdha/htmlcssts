@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" onclick="changeStyle()" style="background-color: aqua; padding: 20px;">
+        <p>DIV 1</p>
+        <div id="div2" onclick="changeStyle()" style="background-color: plum; padding: 20px;">
+            <p>DIV 2</p>
+        </div>
+    </div>
+
+    <script>
+        function changeStyle(){
+            document.getElementById("div1").style.backgroundColor="red";
+            document.getElementById("div2").style.backgroundColor="blue";
+        }
+    </script>
+</body>
+</html>
+<!-- By involving Event propogatio, change styling of 2div id=div1 and div2. -->

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Donation Camp</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<form onsubmit="saveData(event)">
+    <h1>Blood Donation Camp</h1>
+    <p class="demo">Please fill the form</p>
+
+    <button type="button" onclick="changeHeading()">Change Heading</button><br><br>
+
+    <button type="button" onclick="changeStyle()">Change Style</button><br><br>
+
+    <img class="img" src="https://img.freepik.com/free-vector/world-blood-donor-day-with-save-hand_1017-38648.jpg?semt=ais_hybrid&w=740&q=80"
+         height="200px" width="200px">
+    <br><br>
+
+    <button type="button" onclick="toggleImage()">Toggle Image</button>
+    <br><br>
+
+    <label>Name </label>
+    <input type="text" id="name"> <br><br>
+
+    <label>Email </label>
+    <input type="email" id="email"> <br><br>
+
+    <label>Phone </label>
+    <input type="tel" id="phone"> <br><br>
+
+    <label>Gender </label>
+    <input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="female">Female <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Submitted Data:</h2>
+<ul id="list"></ul>
+
+<script>
+    function changeHeading() {
+        document.getElementsByClassName("demo")[0].innerHTML =
+            "Thank you for showing interest in donating blood ❤️";
+    }
+
+    function changeStyle() {
+        document.getElementsByClassName("demo")[0].classList.toggle("highlight");
+    }
+
+    function toggleImage() {
+        let img = document.getElementsByClassName("img")[0];
+        img.style.display = (img.style.display === "none") ? "block" : "none";
+    }
+
+    function saveData(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let gender = document.querySelector('input[name="gender"]:checked')?.value;
+
+        let list = document.getElementById("list");
+
+        let li = document.createElement("li");
+        li.innerHTML = `${name} | ${email} | ${phone} | ${gender}`;
+
+        list.appendChild(li);
+    }
+</script>
+
+</body>
+</html>
+<!-- //TASK
+Design a  webpage which will have a contact us form for Blood Donation Camp.
+when the user will enter deatils it should be stored in a list.
+2. Use class "demo" to make changes in heading of page
+3. Change the styling of para explaining event on click of button
+4. Include an image,which should have toggle effects in term of visbility. -->

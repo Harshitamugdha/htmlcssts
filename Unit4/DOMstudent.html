@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background: rgb(252, 220, 220);
+        }
+        form{
+            margin-bottom: 20px;
+        }
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Registration form</h2>
+    <form id="studentForm">
+        Registration No: <input type="text" id="reg"><br><br>
+        Name : <input type="text" id="name"><br><br>
+        Section: <input type="text" id="section"><br><br>
+        <button type="submit">Add Student</button>
+    </form>
+    <h3>Student List</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Reg No</th>
+                <th>Name</th>
+                <th>Section</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="studentTable">
+        </tbody>
+
+    </table>
+    <script>
+        //form submit
+            document.getElementById("studentForm").addEventListener("submit",function(e){
+                e.preventDefault()
+
+                let reg=document.getElementById("reg").value;
+                let name=document.getElementById("name").value;
+                let section=document.getElementById("section").value;
+
+                let row=document.createElement("tr")
+                    row.innerHTML=`
+                    <td>${reg}</td>
+                    <td>${name}</td>
+                    <td>${section}</td>
+                    <td><button class="delete">Delete</button></td>
+                    `;
+                document.getElementById("studentTable").appendChild(row);
+                //clear form
+                this.reset();
+            })
+
+            document.getElementById('studentTable').addEventListener("click",function(e){
+                //delete row
+                if(e.target.classList.contains("delete")){
+                    e.target.parentElement.parentElement.remove();
+                }
+            })
+    </script>
+</body>
+</html>
