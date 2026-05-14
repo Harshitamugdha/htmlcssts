@@ -1,0 +1,45 @@
+<!-- Calculate the result of three subjects, with function, variables and operators,
+use if-else to show if student pass or fail (40 above is pass). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Result Calculator</h2>
+    <label for="subject1">Subject 1 Marks:</label>
+    <input type="number" id="m1"><BR><br>
+    <label for="subject2">Subject 2 Marks:</label>
+    <input type="number" id="m2"><BR><br>
+    <label for="subject3">Subject 3 Marks:</label>
+    <input type="number" id="m3"><BR><br>
+
+    <button onclick="Calculate()">Show Result</button>
+    <h3 id="result"></h3>
+
+    <script>
+        function Calculate(){
+            let m1=Number(document.getElementById("m1").value);
+            let m2=Number(document.getElementById("m2").value);
+            let m3=Number(document.getElementById("m3").value);
+
+            let total=m1+m2+m3;
+            let percentage=(total/300)*100;
+
+            if(percentage<40){
+                let p=document.getElementById("result")
+                p.innerHTML="Fail";
+                p.style.color="red";
+            }
+            else{
+                let p=document.getElementById("result")
+                p.innerHTML="Pass";
+                p.style.color="green";
+            }
+        }
+    </script>
+</body>
+</html>

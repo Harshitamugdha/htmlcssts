@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>E=Commerce Page</h1>
+
+    <div>
+        <img src="/Activities/h1.jpg" alt="E-commerce Image" width="300">
+        <h3>Showpiece</h3>
+        <p>Price: Rs. 5000</p>
+        <button onclick="addToCart('Showpiece')">Add to Cart</button>
+    </div>
+
+    <div>
+        <img src="/Activities/h2.jpg" alt="E-commerce Image" width="300">
+        <h3>Lamp</h3>
+        <p>Price: Rs. 4000</p>
+        <button onclick="addToCart('Lamp')">Add to Cart</button>
+    </div>
+
+    <div>
+        <img src="/Activities/h3.jpg" alt="E-commerce Image" width="300">
+        <h3>Candle Holder</h3>
+        <p>Price: Rs. 3000</p>
+        <button onclick="addToCart('Candle Holder')">Add to Cart</button>
+    </div>
+
+    <h2>Cart Quantity: <span id="count">0</span></h2>
+
+    <script>
+        let cartItems={};
+        function addToCart(product) {
+             if (cartItems[product]) {
+                cartItems[product]++;
+            } 
+            else {
+                cartItems[product] = 1;
+            }
+
+            let output = "";
+
+            for (let item in cartItems) {
+                output += `${item}: ${cartItems[item]} <br>`;
+            }
+            document.getElementById("count").innerHTML = output;
+        }
+    </script>
+</html>
